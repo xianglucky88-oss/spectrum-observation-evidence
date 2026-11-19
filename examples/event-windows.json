@@ -1,0 +1,27 @@
+{
+  "records": [
+    {
+      "id": "event-windows-01",
+      "windows": [
+        {
+          "window": "W1",
+          "event": "A",
+          "low_khz": 100,
+          "high_khz": 120
+        },
+        {
+          "window": "W2",
+          "event": "A",
+          "low_khz": 119,
+          "high_khz": 130
+        },
+        {
+          "window": "W3",
+          "event": "B",
+          "low_khz": 128,
+          "high_khz": 140
+        }
+      ]
+    }
+  ]
+}

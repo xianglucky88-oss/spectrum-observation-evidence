@@ -1,0 +1,46 @@
+[
+  {
+    "fact_id": "sweep-coverage-01",
+    "bands": [
+      {
+        "band_khz": [
+          1000,
+          1040
+        ],
+        "sweeps": [
+          "A"
+        ],
+        "coverage": "coarse"
+      },
+      {
+        "band_khz": [
+          1040,
+          1060
+        ],
+        "sweeps": [
+          "A",
+          "B"
+        ],
+        "coverage": "fine"
+      },
+      {
+        "band_khz": [
+          1060,
+          1080
+        ],
+        "sweeps": [
+          "B"
+        ],
+        "coverage": "fine"
+      },
+      {
+        "band_khz": [
+          1080,
+          1100
+        ],
+        "sweeps": [],
+        "coverage": "missing"
+      }
+    ]
+  }
+]

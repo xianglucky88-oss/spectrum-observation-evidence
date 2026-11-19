@@ -1,0 +1,24 @@
+{
+  "records": [
+    {
+      "id": "sweep-coverage-01",
+      "low_khz": 1000,
+      "high_khz": 1100,
+      "fine_bin_khz": 5,
+      "sweeps": [
+        {
+          "sweep": "A",
+          "low_khz": 1000,
+          "high_khz": 1060,
+          "bin_khz": 20
+        },
+        {
+          "sweep": "B",
+          "low_khz": 1040,
+          "high_khz": 1080,
+          "bin_khz": 5
+        }
+      ]
+    }
+  ]
+}

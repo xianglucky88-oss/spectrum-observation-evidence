@@ -1,0 +1,29 @@
+{
+  "records": [
+    {
+      "id": "site-check-01",
+      "min_test_level": -40,
+      "checks": [
+        {
+          "station": "A",
+          "performed": true,
+          "test_level": -39
+        },
+        {
+          "station": "B",
+          "performed": true,
+          "test_level": -44
+        },
+        {
+          "station": "C",
+          "performed": false
+        },
+        {
+          "station": "D",
+          "performed": true,
+          "test_level": null
+        }
+      ]
+    }
+  ]
+}

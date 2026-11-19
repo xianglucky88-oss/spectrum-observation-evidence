@@ -1,0 +1,22 @@
+[
+  {
+    "fact_id": "receiver-range-01",
+    "observations": {
+      "a": {
+        "setup": "narrow",
+        "status": "usable",
+        "comparable_level": -100
+      },
+      "b": {
+        "setup": "narrow",
+        "status": "clipped",
+        "comparable_level": null
+      },
+      "c": {
+        "setup": "wide",
+        "status": "below-range",
+        "comparable_level": null
+      }
+    }
+  }
+]

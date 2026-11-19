@@ -1,0 +1,27 @@
+{
+  "records": [
+    {
+      "id": "scheduled-occupancy-01",
+      "readings": [
+        {
+          "reading": "a",
+          "mode": "scheduled",
+          "slot": 0,
+          "occupied": false
+        },
+        {
+          "reading": "b",
+          "mode": "scheduled",
+          "slot": 1,
+          "occupied": true
+        },
+        {
+          "reading": "x",
+          "mode": "triggered",
+          "slot": 0,
+          "occupied": true
+        }
+      ]
+    }
+  ]
+}

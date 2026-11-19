@@ -1,0 +1,42 @@
+[
+  {
+    "fact_id": "event-windows-01",
+    "events": {
+      "A": {
+        "bands_khz": [
+          [
+            100,
+            130
+          ]
+        ],
+        "windows": [
+          "W1",
+          "W2"
+        ]
+      },
+      "B": {
+        "bands_khz": [
+          [
+            128,
+            140
+          ]
+        ],
+        "windows": [
+          "W3"
+        ]
+      }
+    },
+    "ambiguous_overlaps": [
+      {
+        "events": [
+          "A",
+          "B"
+        ],
+        "band_khz": [
+          128,
+          130
+        ]
+      }
+    ]
+  }
+]

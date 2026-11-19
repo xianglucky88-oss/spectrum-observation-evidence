@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spectrum-observation-evidence"
+version = "0.1.0"
+description = "频谱观测与覆盖统计"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.setuptools]
+packages = ["spectrum_observation_evidence"]

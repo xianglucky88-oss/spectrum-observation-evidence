@@ -1,0 +1,11 @@
+[
+  {
+    "fact_id": "scheduled-occupancy-01",
+    "scheduled_count": 2,
+    "occupied_count": 1,
+    "observed_fraction": 0.5,
+    "triggered_activity": [
+      "x"
+    ]
+  }
+]

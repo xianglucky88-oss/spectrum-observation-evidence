@@ -1,0 +1,39 @@
+{
+  "records": [
+    {
+      "id": "receiver-range-01",
+      "settings": [
+        {
+          "setup": "narrow",
+          "floor": -115,
+          "ceiling": -40
+        },
+        {
+          "setup": "wide",
+          "floor": -90,
+          "ceiling": -10
+        }
+      ],
+      "samples": [
+        {
+          "reading": "a",
+          "setup": "narrow",
+          "level": -100,
+          "overload": false
+        },
+        {
+          "reading": "b",
+          "setup": "narrow",
+          "level": -40,
+          "overload": false
+        },
+        {
+          "reading": "c",
+          "setup": "wide",
+          "level": -100,
+          "overload": false
+        }
+      ]
+    }
+  ]
+}

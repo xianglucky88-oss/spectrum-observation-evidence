@@ -1,0 +1,11 @@
+[
+  {
+    "fact_id": "site-check-01",
+    "station_checks": {
+      "A": "pass",
+      "B": "fail",
+      "C": "not-run",
+      "D": "no-evidence"
+    }
+  }
+]
