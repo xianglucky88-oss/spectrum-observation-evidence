@@ -31,6 +31,11 @@ def number(row: Row, field: str, *, minimum: float | None = None) -> float:
     return float(value)
 
 
+def plain(value: float) -> int | float:
+    """整数值按整数输出，便于与输入和人工标注逐条核对。"""
+    return int(value) if float(value).is_integer() else value
+
+
 def integer(row: Row, field: str, *, minimum: int = 0) -> int:
     value = row[field]
     if type(value) is not int or value < minimum:
@@ -38,11 +43,30 @@ def integer(row: Row, field: str, *, minimum: int = 0) -> int:
     return value
 
 
+def optional_text(row: Row, field: str) -> str | None:
+    if field not in row or row[field] is None:
+        return None
+    return text(row, field)
+
+
 def flag(row: Row, field: str) -> bool:
     value = row[field]
     if type(value) is not bool:
         raise ValueError(f"{field} must be true or false")
     return value
+
+
+def optional_flag(row: Row, field: str) -> bool:
+    if field not in row or row[field] is None:
+        return False
+    return flag(row, field)
+
+
+def optional(row: Row, field: str, reader: Callable[[Row, str], Any]) -> Any:
+    """字段缺失或为 null 时返回 None，否则用给定读取器校验。"""
+    if field not in row or row[field] is None:
+        return None
+    return reader(row, field)
 
 
 def index_rows(rows: list[Row], field: str) -> dict[str, Row]:

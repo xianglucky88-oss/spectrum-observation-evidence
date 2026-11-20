@@ -10,7 +10,16 @@
         "sweeps": [
           "A"
         ],
-        "coverage": "coarse"
+        "coverage": "coarse",
+        "fine_bin_khz": 5,
+        "resolution_khz": [
+          20
+        ],
+        "fine_sweeps": [],
+        "coarse_sweeps": [
+          "A"
+        ],
+        "reason": "coarse-sweep-cannot-prove-subbands"
       },
       {
         "band_khz": [
@@ -21,7 +30,19 @@
           "A",
           "B"
         ],
-        "coverage": "fine"
+        "coverage": "fine",
+        "fine_bin_khz": 5,
+        "resolution_khz": [
+          5,
+          20
+        ],
+        "fine_sweeps": [
+          "B"
+        ],
+        "coarse_sweeps": [
+          "A"
+        ],
+        "reason": "fine-resolution-sweep"
       },
       {
         "band_khz": [
@@ -31,7 +52,16 @@
         "sweeps": [
           "B"
         ],
-        "coverage": "fine"
+        "coverage": "fine",
+        "fine_bin_khz": 5,
+        "resolution_khz": [
+          5
+        ],
+        "fine_sweeps": [
+          "B"
+        ],
+        "coarse_sweeps": [],
+        "reason": "fine-resolution-sweep"
       },
       {
         "band_khz": [
@@ -39,7 +69,12 @@
           1100
         ],
         "sweeps": [],
-        "coverage": "missing"
+        "coverage": "missing",
+        "fine_bin_khz": 5,
+        "resolution_khz": [],
+        "fine_sweeps": [],
+        "coarse_sweeps": [],
+        "reason": "no-sweep-coverage"
       }
     ]
   }

@@ -32,6 +32,18 @@
           "setup": "wide",
           "level": -100,
           "overload": false
+        },
+        {
+          "reading": "d",
+          "setup": "narrow",
+          "level": -60,
+          "overload": true
+        },
+        {
+          "reading": "e",
+          "setup": "unlisted",
+          "level": -50,
+          "overload": false
         }
       ]
     }

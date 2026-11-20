@@ -5,17 +5,67 @@
       "a": {
         "setup": "narrow",
         "status": "usable",
-        "comparable_level": -100
+        "comparable_level": -100,
+        "lower_bound": -100,
+        "upper_bound": -100,
+        "bound_basis": {
+          "kind": "measured",
+          "setup": "narrow",
+          "floor": -115,
+          "ceiling": -40
+        },
+        "reason": "within-range"
       },
       "b": {
         "setup": "narrow",
         "status": "clipped",
-        "comparable_level": null
+        "comparable_level": null,
+        "lower_bound": -40,
+        "upper_bound": null,
+        "bound_basis": {
+          "kind": "ceiling",
+          "setup": "narrow",
+          "floor": -115,
+          "ceiling": -40
+        },
+        "reason": "reading-at-or-above-ceiling"
       },
       "c": {
         "setup": "wide",
         "status": "below-range",
-        "comparable_level": null
+        "comparable_level": null,
+        "lower_bound": null,
+        "upper_bound": -90,
+        "bound_basis": {
+          "kind": "floor",
+          "setup": "wide",
+          "floor": -90,
+          "ceiling": -10
+        },
+        "reason": "reading-below-floor"
+      },
+      "d": {
+        "setup": "narrow",
+        "status": "clipped",
+        "comparable_level": null,
+        "lower_bound": -40,
+        "upper_bound": null,
+        "bound_basis": {
+          "kind": "ceiling",
+          "setup": "narrow",
+          "floor": -115,
+          "ceiling": -40
+        },
+        "reason": "reading-at-or-above-ceiling"
+      },
+      "e": {
+        "setup": "unlisted",
+        "status": "no-range-basis",
+        "comparable_level": null,
+        "lower_bound": null,
+        "upper_bound": null,
+        "bound_basis": null,
+        "reason": "setup-has-no-same-scale-range"
       }
     }
   }

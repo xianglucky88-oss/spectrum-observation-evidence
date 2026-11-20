@@ -2,25 +2,39 @@
   "records": [
     {
       "id": "scheduled-occupancy-01",
-      "readings": [
-        {
-          "reading": "a",
-          "mode": "scheduled",
-          "slot": 0,
-          "occupied": false
-        },
-        {
-          "reading": "b",
-          "mode": "scheduled",
-          "slot": 1,
-          "occupied": true
-        },
-        {
-          "reading": "x",
-          "mode": "triggered",
-          "slot": 0,
-          "occupied": true
+      "plan": {
+        "start_s": 0,
+        "end_s": 15,
+        "low_khz": 1000,
+        "high_khz": 1040,
+        "interval_s": 5
+      },
+      "threshold": -50,
+      "required_bin_khz": 5,
+      "settings": [
+        {"setup": "narrow", "floor": -115, "ceiling": -40}
+      ],
+      "range_evidence": {
+        "r1": {
+          "status": "clipped",
+          "comparable_level": null,
+          "lower_bound": -40,
+          "upper_bound": null,
+          "bound_basis": {"kind": "ceiling", "setup": "narrow", "floor": -115, "ceiling": -40}
         }
+      },
+      "readings": [
+        {"reading": "r1", "mode": "scheduled", "slot": 0, "band_khz": [1000, 1010], "bin_khz": 5},
+        {"reading": "r2", "mode": "scheduled", "slot": 0, "band_khz": [1000, 1010], "bin_khz": 5, "setup": "narrow", "level": -70},
+        {"reading": "r3", "mode": "scheduled", "slot": 0, "band_khz": [1010, 1030], "bin_khz": 20, "setup": "narrow", "level": -60},
+        {"reading": "r4", "mode": "scheduled", "slot": 1, "band_khz": [1000, 1020], "bin_khz": 5, "setup": "narrow", "level": -60},
+        {"reading": "r5", "mode": "scheduled", "slot": 1, "band_khz": [1020, 1030], "bin_khz": 5, "setup": "narrow", "level": -30},
+        {"reading": "r6", "mode": "scheduled", "slot": 1, "band_khz": [1030, 1040], "bin_khz": 5, "setup": "unlisted", "level": -30},
+        {"reading": "r7", "mode": "scheduled", "slot": 1, "band_khz": [1000, 1010], "bin_khz": 5, "setup": "narrow", "level": -120},
+        {"reading": "t1", "mode": "triggered", "slot": 1, "band_khz": [1030, 1040], "level": -30},
+        {"reading": "t2", "mode": "triggered", "slot": 0, "band_khz": [1030, 1040], "level": -30},
+        {"reading": "t3", "mode": "triggered", "slot": 2, "band_khz": [1000, 1010], "level": -30},
+        {"reading": "r8", "mode": "scheduled", "slot": 2, "band_khz": [1010, 1030], "bin_khz": 5, "setup": "narrow", "level": -40}
       ]
     }
   ]

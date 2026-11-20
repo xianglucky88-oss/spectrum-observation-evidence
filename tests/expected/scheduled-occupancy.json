@@ -1,11 +1,258 @@
 [
   {
     "fact_id": "scheduled-occupancy-01",
-    "scheduled_count": 2,
-    "occupied_count": 1,
-    "observed_fraction": 0.5,
-    "triggered_activity": [
-      "x"
-    ]
+    "plan": {
+      "start_s": 0,
+      "end_s": 15,
+      "low_khz": 1000,
+      "high_khz": 1040,
+      "interval_s": 5
+    },
+    "planned_area_khz_s": 600,
+    "threshold": -50,
+    "required_bin_khz": 5,
+    "occupied_area_khz_s": {
+      "lower": 150,
+      "upper": 500
+    },
+    "occupied_fraction": {
+      "lower": 0.25,
+      "upper": 0.8333333333333334
+    },
+    "area_by_status_khz_s": {
+      "occupied": 150,
+      "not-occupied": 100,
+      "conflict": 50,
+      "insufficient-resolution": 100,
+      "inconclusive": 50,
+      "trigger-only": 100,
+      "no-scheduled-evidence": 50
+    },
+    "ranges": [
+      {
+        "time_s": [
+          0,
+          5
+        ],
+        "band_khz": [
+          1000,
+          1010
+        ],
+        "area_khz_s": 50,
+        "status": "conflict",
+        "occupied_readings": [
+          "r1"
+        ],
+        "not_occupied_readings": [
+          "r2"
+        ],
+        "trigger_readings": [],
+        "reason": "occupied-and-not-occupied-evidence-overlap",
+        "evidence": {
+          "r1": {
+            "status": "bounded",
+            "lower_bound": -40,
+            "upper_bound": null
+          },
+          "r2": {
+            "status": "usable",
+            "lower_bound": -70,
+            "upper_bound": -70
+          }
+        }
+      },
+      {
+        "time_s": [
+          0,
+          5
+        ],
+        "band_khz": [
+          1010,
+          1030
+        ],
+        "area_khz_s": 100,
+        "status": "insufficient-resolution",
+        "readings": [
+          "r3"
+        ],
+        "resolution_khz": [
+          20
+        ],
+        "required_bin_khz": 5,
+        "trigger_readings": [],
+        "reason": "coarse-sweep-cannot-prove-its-unresolved-subbands"
+      },
+      {
+        "time_s": [
+          0,
+          5
+        ],
+        "band_khz": [
+          1030,
+          1040
+        ],
+        "area_khz_s": 50,
+        "status": "trigger-only",
+        "trigger_readings": [
+          "t2"
+        ],
+        "reason": "triggered-backfill-does-not-replace-scheduled-samples"
+      },
+      {
+        "time_s": [
+          5,
+          10
+        ],
+        "band_khz": [
+          1000,
+          1020
+        ],
+        "area_khz_s": 100,
+        "status": "not-occupied",
+        "readings": [
+          "r4",
+          "r7"
+        ],
+        "resolution_khz": [
+          5
+        ],
+        "trigger_readings": [],
+        "evidence": {
+          "r4": {
+            "status": "usable",
+            "lower_bound": -60,
+            "upper_bound": -60
+          },
+          "r7": {
+            "status": "below-range",
+            "lower_bound": null,
+            "upper_bound": -115
+          }
+        }
+      },
+      {
+        "time_s": [
+          5,
+          10
+        ],
+        "band_khz": [
+          1030,
+          1040
+        ],
+        "area_khz_s": 50,
+        "status": "inconclusive",
+        "readings": [
+          "r6"
+        ],
+        "trigger_readings": [
+          "t1"
+        ],
+        "reasons": {
+          "r6": "setup-has-no-same-scale-range"
+        },
+        "reason": "no-reading-supports-a-definite-verdict",
+        "evidence": {
+          "r6": {
+            "status": "no-range-basis",
+            "lower_bound": null,
+            "upper_bound": null
+          }
+        }
+      },
+      {
+        "time_s": [
+          5,
+          15
+        ],
+        "band_khz": [
+          1020,
+          1030
+        ],
+        "area_khz_s": 100,
+        "status": "occupied",
+        "readings": [
+          "r5",
+          "r8"
+        ],
+        "resolution_khz": [
+          5
+        ],
+        "trigger_readings": [],
+        "evidence": {
+          "r8": {
+            "status": "clipped",
+            "lower_bound": -40,
+            "upper_bound": null
+          },
+          "r5": {
+            "status": "clipped",
+            "lower_bound": -40,
+            "upper_bound": null
+          }
+        }
+      },
+      {
+        "time_s": [
+          10,
+          15
+        ],
+        "band_khz": [
+          1000,
+          1010
+        ],
+        "area_khz_s": 50,
+        "status": "trigger-only",
+        "trigger_readings": [
+          "t3"
+        ],
+        "reason": "triggered-backfill-does-not-replace-scheduled-samples"
+      },
+      {
+        "time_s": [
+          10,
+          15
+        ],
+        "band_khz": [
+          1010,
+          1020
+        ],
+        "area_khz_s": 50,
+        "status": "occupied",
+        "readings": [
+          "r8"
+        ],
+        "resolution_khz": [
+          5
+        ],
+        "trigger_readings": [],
+        "evidence": {
+          "r8": {
+            "status": "clipped",
+            "lower_bound": -40,
+            "upper_bound": null
+          }
+        }
+      },
+      {
+        "time_s": [
+          10,
+          15
+        ],
+        "band_khz": [
+          1030,
+          1040
+        ],
+        "area_khz_s": 50,
+        "status": "no-scheduled-evidence",
+        "trigger_readings": [],
+        "reason": "no-scheduled-reading-covers-this-range"
+      }
+    ],
+    "trigger_readings": [
+      "t1",
+      "t2",
+      "t3"
+    ],
+    "outside_plan_readings": []
   }
 ]
